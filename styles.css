@@ -1,0 +1,51 @@
+:root{color-scheme:dark;--green:#082e26;--cream:#f2f0df;--muted:#a7b9ae;--gold:#d9b678}
+*{box-sizing:border-box}
+html{min-width:320px;background:var(--green)}
+body{margin:0;min-height:100svh;display:flex;flex-direction:column;color:var(--cream);font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased;background:radial-gradient(ellipse at 50% 34%,#104335 0,transparent 56%),var(--green)}
+a{color:inherit;text-decoration:none}
+a:focus-visible{outline:2px solid var(--gold);outline-offset:8px;border-radius:2px}
+.masthead{display:flex;justify-content:space-between;align-items:center;padding:38px 5.2vw;gap:24px}
+.wordmark{font-size:12px;font-weight:700;letter-spacing:.17em;display:flex;align-items:center;gap:12px}
+.brand-dot{width:5px;height:5px;background:var(--gold);border-radius:50%}
+.domain{font-size:12px;color:var(--muted);letter-spacing:.04em}
+main{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px 24px 80px}
+.emblem{position:relative;display:grid;place-items:center;width:360px;height:260px;margin-bottom:28px}
+.torch{width:108px;height:144px;position:relative;z-index:2;filter:drop-shadow(0 8px 32px #031a2440)}
+.echo{position:absolute;width:81px;height:108px;opacity:.075;top:76px}
+.echo-left{left:58px;animation:flow-left 12s ease-in-out infinite}
+.echo-right{right:58px;animation:flow-right 12s ease-in-out infinite}
+.orbit{position:absolute;border:1px solid #c3d9bb12;width:242px;height:242px;border-radius:50%}
+.orbit-two{width:340px;height:340px;border-color:#c3d9bb08}
+.eyebrow{font-size:10px;letter-spacing:.24em;color:var(--gold);margin:0 0 22px;font-weight:600}
+h1{font-size:clamp(42px,6.3vw,88px);font-weight:400;line-height:1.06;letter-spacing:-.065em;margin:0 0 27px}
+.period{color:var(--gold)}
+.claim{font-size:clamp(17px,2vw,21px);line-height:1.6;letter-spacing:-.025em;margin:0;color:var(--cream)}
+.claim span{color:var(--muted)}
+.links{display:flex;gap:35px;align-items:center;justify-content:center;margin-top:39px}
+.links a{font-size:12px;padding:11px 0;border-bottom:1px solid #f2f0df30;transition:color .2s,border-color .2s}
+.links a span{margin-left:16px;color:var(--gold)}
+.links a:hover{color:var(--gold);border-color:var(--gold)}
+footer{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:25px 5.2vw 30px;border-top:1px solid #f2f0df12;font-size:10px;line-height:1.6;color:var(--muted)}
+footer a:hover{color:var(--cream)}
+@keyframes flow-left{0%,100%{transform:translateX(-10px);opacity:.035}50%{transform:translateX(10px);opacity:.1}}
+@keyframes flow-right{0%,100%{transform:translateX(-10px);opacity:.1}50%{transform:translateX(10px);opacity:.035}}
+@media(min-width:1600px){main{padding-bottom:110px}.emblem{margin-bottom:42px}}
+@media(max-width:600px){.masthead{padding:28px 24px}.wordmark{font-size:10px;letter-spacing:.13em}.domain{font-size:10px}main{padding:36px 20px 64px}.emblem{width:290px;height:225px;margin-bottom:27px}.orbit{width:208px;height:208px}.orbit-two{width:280px;height:280px}.torch{width:96px;height:128px}.echo-left{left:32px}.echo-right{right:32px}.echo{top:62px}.eyebrow{font-size:9px;margin-bottom:22px}h1{font-size:clamp(39px,10vw,60px);margin-bottom:23px}.links{gap:25px;margin-top:30px}.links a{font-size:11px}.links a span{margin-left:8px}footer{padding:22px 24px;flex-direction:column;gap:9px;text-align:center}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+
+/* Original logo: lighten blends its dark background into the green stage. */
+.torch{width:260px;height:260px;object-fit:contain;mix-blend-mode:lighten;filter:none}
+.echo{width:220px;height:220px;top:20px;mix-blend-mode:lighten}
+.echo-left{left:-35px}.echo-right{right:-35px}
+@media(max-width:600px){.torch{width:230px;height:230px}.echo{width:185px;height:185px;top:20px}.echo-left{left:-24px}.echo-right{right:-24px}}
+
+/* Consistent uppercase wordmark, with the gold dot after FLOW. */
+h1{font-size:clamp(32px,5.8vw,80px);letter-spacing:-.045em;display:flex;align-items:center;justify-content:center;gap:.2em}
+.title-dot{display:inline-block;flex-shrink:0;width:.095em;height:.095em;border-radius:50%;background:var(--gold)}
+@media(max-width:600px){h1{font-size:clamp(25px,7.1vw,42px);letter-spacing:-.045em;white-space:nowrap}.wordmark{gap:8px}}
+
+/* Rendered sculpture; SVG distortion moves only the central flame rays. */
+.sculpture{width:min(620px,100%);aspect-ratio:3 / 2;position:relative;margin:-8px 0 36px;flex-shrink:0}
+.sculpture-scene{display:block;width:100%;height:100%;mask-image:radial-gradient(ellipse at 50% 48%,#000 42%,#000c 58%,transparent 73%);-webkit-mask-image:radial-gradient(ellipse at 50% 48%,#000 42%,#000c 58%,transparent 73%)}
+@media(max-width:600px){main{padding-top:16px}.sculpture{width:calc(100% + 20px);max-width:calc(100vw - 20px);margin:0 0 30px}}
+@media(prefers-reduced-motion:reduce){.moving-flame{filter:none}}

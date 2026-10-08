@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Torch Flow One. Building independent infrastructure for the Plasma and XPL ecosystem. Independent project. Not affiliated with Plasma.">
+  <meta name="theme-color" content="#082e26">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; script-src 'none'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+  <title>Torch Flow One — Independent infrastructure</title>
+  <link rel="icon" type="image/png" href="assets/torch-original.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="masthead">
+    <a class="wordmark" href="./" aria-label="Torch Flow One home"><span>TORCH FLOW</span><span class="brand-dot" aria-hidden="true"></span><span>ONE</span></a>
+    <span class="domain">torchflow.one</span>
+  </header>
+  <main>
+    <div class="sculpture" aria-hidden="true">
+      <svg class="sculpture-scene" viewBox="0 0 1536 1024" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <clipPath id="flame-region"><path d="M530 15H1000V500H530Z"/></clipPath>
+          <clipPath id="still-region"><path d="M0 0H1536V1024H0Z M530 15V500H1000V15Z" clip-rule="evenodd"/></clipPath>
+          <filter id="flame-motion" x="-5%" y="-5%" width="110%" height="110%" color-interpolation-filters="sRGB">
+            <feTurbulence type="fractalNoise" baseFrequency="0.008 0.018" numOctaves="2" seed="8" result="flow">
+              <animate attributeName="baseFrequency" values="0.008 0.018;0.011 0.023;0.009 0.02;0.008 0.018" dur="11s" repeatCount="indefinite"/>
+            </feTurbulence>
+            <feDisplacementMap in="SourceGraphic" in2="flow" scale="8" xChannelSelector="R" yChannelSelector="G">
+              <animate attributeName="scale" values="5;12;7;10;5" dur="7s" repeatCount="indefinite"/>
+            </feDisplacementMap>
+          </filter>
+        </defs>
+        <image href="assets/torch-sculpture.png" width="1536" height="1024" clip-path="url(#still-region)"/>
+        <g clip-path="url(#flame-region)"><image class="moving-flame" href="assets/torch-sculpture.png" width="1536" height="1024" filter="url(#flame-motion)"/></g>
+      </svg>
+    </div>
+    <p class="eyebrow">INDEPENDENT BY DESIGN</p>
+    <h1 aria-label="Torch Flow One">TORCH FLOW <span class="title-dot" aria-hidden="true"></span> ONE</h1>
+    <p class="claim">Building infrastructure for<br><span>the Plasma &amp; XPL ecosystem.</span></p>
+    <nav class="links" aria-label="Connect with Torch Flow One">
+      <a href="https://x.com/torchflowone" target="_blank" rel="noopener noreferrer">Follow on X <span aria-hidden="true">↗</span></a>
+      <a href="https://github.com/torchflowone" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+      <a href="mailto:hello@torchflow.one">Get in touch <span aria-hidden="true">↗</span></a>
+    </nav>
+  </main>
+  <footer><span>Independent project. Not affiliated with Plasma.</span><a href="mailto:hello@torchflow.one">hello@torchflow.one</a></footer>
+</body>
+</html>
