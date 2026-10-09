@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1254" height="1254" viewBox="0 0 1254 1254">
+  <!-- A soft envelope around the original logo. The mark itself is never redrawn. -->
+  <defs>
+    <filter id="feather" x="-15%" y="-10%" width="130%" height="120%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+  </defs>
+  <path fill="white" filter="url(#feather)" d="M575 26 C650 40 705 110 735 180 C805 236 908 404 905 538 C913 670 835 718 810 770 L737 810 C700 890 690 1125 650 1205 C632 1240 598 1228 580 1195 C550 1135 550 955 526 872 L479 805 L434 788 C422 750 390 732 362 690 C315 620 325 510 340 453 C375 335 475 236 541 170 C570 140 570 91 575 26Z"/>
+</svg>
