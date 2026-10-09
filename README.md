@@ -1,34 +1,29 @@
 # Torch Flow One
 
-Statische Landingpage ohne JavaScript, Libraries, externe Fonts, Tracking oder Formulare.
+Static GitHub Pages landing page for independent Plasma infrastructure. HTML and CSS only: no JavaScript, frameworks, external fonts, tracking, forms or external asset requests.
 
-## Branding vor Veröffentlichung
+## Branding
 
-`assets/torch-original.png` enthält das vom Nutzer bereitgestellte originale Logo inklusive Hintergrund. Die Darstellung nutzt CSS `mix-blend-mode: lighten`, um den dunklen Bildhintergrund in die grüne Bühne einzublenden. Die Bilddatei selbst ist unverändert. Für einen späteren transparenten Export kann diese Datei ersetzt und die Blend-Einstellung entfernt werden.
+The original user-provided neon torch is preserved in `assets/torch-neon.png`. The banner reference is translated into a CSS orbit scene rather than used as a page background. Four subdued copies of the torch surround the central mark. CSS masks and screen blending integrate the original dark image background; the source image is unmodified.
 
-GitHub: https://github.com/torchflowone (im bisherigen Gespräch bestätigt).
-X: https://x.com/torchflowone (aus dem bisherigen Branding abgeleitet; vor Veröffentlichung prüfen).
-Mail: hello@torchflow.one.
+Animation uses only opacity and transforms, with 24–28 second cycles. `prefers-reduced-motion: reduce` disables every animation and transition. The orbit scene is decorative and hidden from assistive technology. The page includes keyboard focus outlines, a skip link, and a forced-colors fallback for gradient text.
 
-## Lokal ansehen
+## Content
 
-In diesem Ordner einen statischen Webserver starten, z. B. `python3 -m http.server 8080`, und http://localhost:8080 öffnen.
+Public role: **Plasma mainnet observer**, not an active validator. The infrastructure row describes the network, role and operation; it is not a live availability indicator. No uptime, monitoring, delegation or validator claims are made.
 
-## GitHub Pages
+Existing links are preserved: X `https://x.com/torchflowone`, GitHub `https://github.com/torchflowone`, contact `hello@torchflow.one`.
 
-1. Ein Repository unter `torchflowone` erstellen, zum Beispiel `torchflowone.github.io`.
-2. Den Inhalt dieses Ordners einschließlich `.nojekyll` und `CNAME` in dessen Hauptverzeichnis übertragen.
-3. Unter Settings → Pages Veröffentlichung vom Branch `main`, Ordner `/ (root)`, wählen.
-4. Custom domain auf `torchflow.one` setzen. Die enthaltene CNAME-Datei verwendet dieselbe Domain.
-5. Beim DNS-Anbieter die Domain gemäß der aktuellen offiziellen GitHub-Anleitung konfigurieren: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site
-6. HTTPS aktivieren, sobald das Zertifikat bereitsteht. Logo, Links und Darstellung auf Desktop/Mobile vor dem öffentlichen Teilen prüfen.
+## Preview and deployment
 
-Für eine Projekt-URL sind alle Asset-Pfade relativ. Die Domain-Datei erst für das tatsächlich gewünschte Custom-Domain-Deployment übernehmen.
+Run `python3 -m http.server 8080` from this directory. Open `http://localhost:8080`.
 
-## Sicherheit und Zugänglichkeit
+The existing `.nojekyll` and `CNAME` are unchanged. Deploy the root of this repository through its existing GitHub Pages configuration. Relative asset paths also work under a project path.
 
-Restriktive Content Security Policy im HTML; keine Skripte, Verbindungen oder Formulare. GitHub Pages unterstützt keine frei konfigurierbaren HTTP-Sicherheitsheader; `frame-ancestors` lässt sich daher hier nicht zuverlässig über einen HTML-Meta-Tag setzen. Neue externe Tabs nutzen `noopener noreferrer`. Animationen respektieren `prefers-reduced-motion`. Logo-Echos sind dekorativ, Links per Tastatur erreichbar.
+## Security
 
-## 3D-Skulptur
+The existing restrictive CSP is unchanged: scripts, connections, objects, forms and base URLs are disallowed; styles and images are local only. External tabs use `noopener noreferrer`; referrer policy remains `no-referrer`. GitHub Pages does not provide arbitrary security response headers; meta CSP cannot enforce `frame-ancestors`.
 
-Der Hero verwendet einen KI-generierten 3D-Bildentwurf (`assets/torch-sculpture.png`), keine Echtzeit-3D-Szene und kein Video. Ein inline SVG mit animiertem Displacement-Filter bewegt ausschließlich den zentralen oberen Strahlenbereich. Schale, Griff, Materialfarben und Seitenfackeln bleiben statisch. Bei reduzierter Bewegung wird der Bildfilter deaktiviert. Die Interpretation ist ein 3D-Entwurf des Original-Logos; das Original bleibt als Favicon erhalten.
+## Redesign verification
+
+Visually reviewed in the Codex browser at 1440px desktop and 390px mobile. Checked 320px mobile for horizontal overflow and image loading. Navigation destinations match the previous version; no browser errors or warnings were observed. Reduced-motion rules were inspected in the stylesheet (browser motion emulation was unavailable).

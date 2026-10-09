@@ -3,47 +3,53 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Torch Flow One. Building independent infrastructure for the Plasma and XPL ecosystem. Independent project. Not affiliated with Plasma.">
-  <meta name="theme-color" content="#082e26">
+  <meta name="description" content="Torch Flow One. Independent infrastructure for the Plasma and XPL ecosystem. Operating a Plasma mainnet observer. Not affiliated with Plasma.">
+  <meta name="theme-color" content="#020712">
   <meta name="referrer" content="no-referrer">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; script-src 'none'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
-  <title>Torch Flow One — Independent infrastructure</title>
-  <link rel="icon" type="image/png" href="assets/torch-original.png">
+  <title>Torch Flow One — Independent Plasma Infrastructure</title>
+  <link rel="icon" type="image/png" href="assets/torch-neon.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="masthead">
-    <a class="wordmark" href="./" aria-label="Torch Flow One home"><span>TORCH FLOW</span><span class="brand-dot" aria-hidden="true"></span><span>ONE</span></a>
-    <span class="domain">torchflow.one</span>
+    <a class="wordmark" href="./" aria-label="Torch Flow One home">torch flow<span>.one</span></a>
+    <span class="header-label">INDEPENDENT INFRASTRUCTURE</span>
   </header>
-  <main>
-    <div class="sculpture" aria-hidden="true">
-      <svg class="sculpture-scene" viewBox="0 0 1536 1024" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <clipPath id="flame-region"><path d="M530 15H1000V500H530Z"/></clipPath>
-          <clipPath id="still-region"><path d="M0 0H1536V1024H0Z M530 15V500H1000V15Z" clip-rule="evenodd"/></clipPath>
-          <filter id="flame-motion" x="-5%" y="-5%" width="110%" height="110%" color-interpolation-filters="sRGB">
-            <feTurbulence type="fractalNoise" baseFrequency="0.008 0.018" numOctaves="2" seed="8" result="flow">
-              <animate attributeName="baseFrequency" values="0.008 0.018;0.011 0.023;0.009 0.02;0.008 0.018" dur="11s" repeatCount="indefinite"/>
-            </feTurbulence>
-            <feDisplacementMap in="SourceGraphic" in2="flow" scale="8" xChannelSelector="R" yChannelSelector="G">
-              <animate attributeName="scale" values="5;12;7;10;5" dur="7s" repeatCount="indefinite"/>
-            </feDisplacementMap>
-          </filter>
-        </defs>
-        <image href="assets/torch-sculpture.png" width="1536" height="1024" clip-path="url(#still-region)"/>
-        <g clip-path="url(#flame-region)"><image class="moving-flame" href="assets/torch-sculpture.png" width="1536" height="1024" filter="url(#flame-motion)"/></g>
-      </svg>
-    </div>
-    <p class="eyebrow">INDEPENDENT BY DESIGN</p>
-    <h1 aria-label="Torch Flow One">TORCH FLOW <span class="title-dot" aria-hidden="true"></span> ONE</h1>
-    <p class="claim">Building infrastructure for<br><span>the Plasma &amp; XPL ecosystem.</span></p>
-    <nav class="links" aria-label="Connect with Torch Flow One">
-      <a href="https://x.com/torchflowone" target="_blank" rel="noopener noreferrer">Follow on X <span aria-hidden="true">↗</span></a>
-      <a href="https://github.com/torchflowone" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-      <a href="mailto:hello@torchflow.one">Get in touch <span aria-hidden="true">↗</span></a>
-    </nav>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span aria-hidden="true"></span> PLASMA INFRASTRUCTURE</p>
+        <h1 id="hero-title">Independent<br>by design.<br><span>Connected</span><br>by purpose.</h1>
+        <p class="claim">Building infrastructure for the Plasma &amp; XPL ecosystem. One torch in a growing network.</p>
+        <p class="role">Plasma mainnet observer <span aria-hidden="true">/</span> Torch Flow One</p>
+        <nav class="links" aria-label="Connect with Torch Flow One">
+          <a class="primary-link" href="https://x.com/torchflowone" target="_blank" rel="noopener noreferrer">Follow on X <span aria-hidden="true">↗</span></a>
+          <a href="https://github.com/torchflowone" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          <a href="mailto:hello@torchflow.one">Get in touch <span aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
+      <div class="scene" aria-hidden="true">
+        <div class="scene-glow"></div>
+        <div class="orbit orbit-back"></div>
+        <div class="orbit orbit-outer"></div>
+        <div class="orbit orbit-inner"></div>
+        <img class="torch satellite satellite-back-left" src="assets/torch-neon.png" alt="" width="1254" height="1254">
+        <img class="torch satellite satellite-back-right" src="assets/torch-neon.png" alt="" width="1254" height="1254">
+        <img class="torch satellite satellite-left" src="assets/torch-neon.png" alt="" width="1254" height="1254">
+        <img class="torch satellite satellite-right" src="assets/torch-neon.png" alt="" width="1254" height="1254">
+        <div class="reflection"></div>
+        <img class="torch torch-focus" src="assets/torch-neon.png" alt="" width="1254" height="1254" fetchpriority="high">
+        <span class="scene-caption">A SHARED NETWORK. AN INDEPENDENT PERSPECTIVE.</span>
+      </div>
+    </section>
+    <dl class="infrastructure" aria-label="Infrastructure overview">
+      <div><dt>NETWORK</dt><dd>Plasma mainnet</dd></div>
+      <div><dt>NODE ROLE</dt><dd>Mainnet observer</dd></div>
+      <div><dt>OPERATION</dt><dd>Independent infrastructure</dd></div>
+    </dl>
   </main>
-  <footer><span>Independent project. Not affiliated with Plasma.</span><a href="mailto:hello@torchflow.one">hello@torchflow.one</a></footer>
+  <footer><span>Independent project. Not affiliated with Plasma.</span><a href="mailto:hello@torchflow.one">hello@torchflow.one <span aria-hidden="true">↗</span></a></footer>
 </body>
 </html>
