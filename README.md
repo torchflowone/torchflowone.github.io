@@ -10,7 +10,9 @@ The local `assets/torch-feather-mask-v5.svg` follows a soft envelope around the 
 
 The original source `assets/torch-neon.png` is retained. The 96px favicon is `assets/torch-icon-v2.png`. Assets have new filenames and the stylesheet URL includes a version query to avoid mixing cached old and new visual elements.
 
-Only two tiny light points animate, following a shallow elliptical CSS motion path on a 32-second cycle. Their opacity changes subtly with depth. All large raster layers stay still. Motion is enabled only with supported motion paths and `prefers-reduced-motion: no-preference`; otherwise the lights remain at two separate static positions. The `prefers-reduced-motion: reduce` rule also disables every animation and transition. The complete scene remains visible when motion is disabled. The scene is decorative and hidden from assistive technology. Keyboard focus outlines, the skip link and forced-colors text fallbacks remain in place.
+Two tiny light points animate, following a shallow elliptical CSS motion path on a 32-second cycle. Their opacity changes subtly with depth. All large raster layers stay still. Orbit motion is enabled only with supported motion paths and `prefers-reduced-motion: no-preference`; otherwise the lights remain at two separate static positions.
+
+The gradients inside `.one` and `Connected` shift slowly on a 12-second CSS cycle, easing forward and back with identical start/end frames for a seamless loop. Only these two small text backgrounds repaint. Their original static gradients remain in place when reduced motion is requested. The `prefers-reduced-motion: reduce` rule also disables every animation and transition. The complete scene remains visible when motion is disabled. The scene is decorative and hidden from assistive technology. Keyboard focus outlines, the skip link and forced-colors text fallbacks remain in place.
 
 ## Content and security
 
@@ -32,6 +34,7 @@ Wait for the GitHub Pages deployment to complete, then reload the site. Relative
 - Browser checks at 1440px, 768px, 390px and 320px: no horizontal overflow, images load correctly, existing navigation targets preserved.
 - Restored higher torch positions and feathered image edges visually reviewed on desktop and mobile; caption remains clear of following content. Interactive hero links have at least 44px height.
 - Moving light points confirmed through changing computed motion-path positions in the browser. The central torch and background remain stationary.
+- Text gradient animation checked at 1440px and 390px: both text backgrounds move, remain clipped to their letters and preserve layout. The 12-second keyframes share the same start/end position; reduced-motion retains the original static gradients.
 - No browser errors or warnings. Zero script elements. CSP unchanged from baseline.
 - Reduced-motion media rule confirmed in the browser's parsed stylesheet; OS-level reduced-motion emulation was unavailable.
 - Local preview only; no live deployment was performed for this update.

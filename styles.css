@@ -55,6 +55,13 @@ dt{font-size:9px;color:#8c9bb3;letter-spacing:.18em;margin-bottom:10px}dd{margin
 footer{display:flex;justify-content:space-between;gap:20px;padding-top:24px;padding-bottom:28px;border-top:1px solid #768caa18;color:#8c9bb3;font-size:10px;line-height:1.7}footer a span{margin-left:8px}
 @keyframes orbit-travel{from{offset-distance:0%}to{offset-distance:100%}}
 @keyframes orbit-depth{0%,50%,100%{opacity:.42}25%{opacity:.82}75%{opacity:.2}}
+/* Small text surfaces only; the return sweep makes the loop seamless. */
+@media(prefers-reduced-motion:no-preference){
+  .wordmark span{background-image:linear-gradient(100deg,var(--cyan),var(--blue) 25%,var(--magenta) 50%,var(--blue) 75%,var(--cyan))}
+  h1>span{background-image:linear-gradient(100deg,#90f3ff,#a3bbff 32.5%,#caa6ff 50%,#a3bbff 67.5%,#90f3ff)}
+  .wordmark span,h1>span{background-size:200% 100%;background-position:0% 50%;animation:text-gradient-flow 12s ease-in-out infinite}
+}
+@keyframes text-gradient-flow{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
 @media(min-width:1500px){.hero{min-height:730px}}
 @media(max-width:1000px){.masthead,main,footer{padding-inline:36px}.hero{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);min-height:570px}h1{font-size:49px}.links{gap:16px}.scene-caption{font-size:7px;letter-spacing:.1em}}
 @media(max-width:720px){.masthead,main,footer{padding-inline:24px}.masthead{padding-top:28px;padding-bottom:16px}.wordmark{font-size:20px}.header-label{display:none}.hero{grid-template-columns:1fr;gap:26px;min-height:0;padding-top:12px;padding-bottom:42px}.scene{grid-row:1;width:min(450px,100%);margin-inline:auto;aspect-ratio:1}.hero-copy{grid-row:2}.eyebrow{margin-bottom:22px;font-size:9px}h1{font-size:clamp(42px,8.5vw,60px)}.claim{max-width:420px}.scene-caption{font-size:7px}.links{gap:22px;margin-top:25px}.infrastructure{gap:19px;padding-block:25px;grid-template-columns:1fr}.infrastructure>div{padding-left:0;border:0;display:grid;grid-template-columns:105px 1fr;align-items:center}dt{margin:0;font-size:8px}dd{font-size:12px}footer{flex-direction:column;gap:8px;padding-block:22px}}
